@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Мерч ИТМО</title>
+  <!-- Скрипт Telegram: даёт доступ к объекту Telegram.WebApp -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Шапка: название и кнопка корзины -->
+  <header class="top">
+    <div>
+      <h1>Мерч ИТМО</h1>
+      <p class="subtitle">Одежда университета. Сейчас всё бесплатно</p>
+    </div>
+    <button class="cart-btn" id="cartBtn" aria-label="Открыть корзину">
+      <span aria-hidden="true">🛍</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- Сюда JavaScript вставит карточки товаров -->
+  <main class="catalog" id="catalog"></main>
+
+  <p class="hint" id="browserHint" hidden>
+    Сайт открыт в обычном браузере. Чтобы оплатить заказ, откройте его через бота
+    кнопкой «🛒 Сделать заказ».
+  </p>
+
+  <!-- Затемнение фона + всплывающая панель (карточка товара или корзина) -->
+  <div class="overlay" id="overlay" hidden></div>
+  <section class="sheet" id="sheet" hidden aria-modal="true" role="dialog">
+    <button class="sheet-close" id="sheetClose" aria-label="Закрыть">✕</button>
+    <div id="sheetContent"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

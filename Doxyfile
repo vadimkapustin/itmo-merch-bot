@@ -1,0 +1,17 @@
+# Настройки Doxygen — генератора документации из комментариев в коде.
+# Запуск: doxygen Doxyfile  → откройте doxygen_docs/html/index.html
+PROJECT_NAME           = "ITMO Merch Bot"
+PROJECT_BRIEF          = "Telegram-магазин мерча Университета ИТМО"
+OUTPUT_DIRECTORY       = doxygen_docs
+OUTPUT_LANGUAGE        = Russian
+INPUT                  = README.md main.py config.py bot database
+USE_MDFILE_AS_MAINPAGE = README.md
+FILE_PATTERNS          = *.py
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+PYTHON_DOCSTRING       = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO
