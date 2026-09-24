@@ -55,22 +55,7 @@ itmo-merch-bot/
 
 ## Запуск
 
-1. **Создайте бота** у [@BotFather](https://t.me/BotFather) командой `/newbot`
-   и сохраните токен.
-2. **Опубликуйте сайт.** Загрузите проект на GitHub, откройте
-   *Settings → Pages → Source* и выберите **GitHub Actions**.
-   Через минуту сайт будет доступен по адресу
-   `https://<логин>.github.io/<репозиторий>/`.
-3. **Установите зависимости:**
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate          # Windows  (Linux/macOS: source venv/bin/activate)
-   pip install -r requirements.txt
-   ```
-4. **Заполните настройки:** скопируйте `.env.example` в `.env` и впишите
-   токен, свой Telegram id (узнать у [@userinfobot](https://t.me/userinfobot))
-   и адрес сайта.
-5. **Запустите:** `python main.py` и отправьте боту `/start`.
+Откройте бота в Telegram и отправьте команду `/start`.
 
 ## Документация
 
