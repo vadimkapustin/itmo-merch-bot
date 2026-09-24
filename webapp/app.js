@@ -185,13 +185,9 @@ function openCart() {
 
 // ---------- Оформление заказа ----------
 // Отправляет корзину боту. После sendData Telegram сам закроет сайт,
-// а бот пришлёт счёт на оплату.
+// а бот пришлёт подтверждение заказа.
 function checkout() {
   if (cart.size === 0) return;
-  if (!insideTelegram) {
-    alert("Откройте магазин через бота, чтобы оплатить заказ.");
-    return;
-  }
   const items = [...cart].map(([id, qty]) => ({ id, qty }));
   tg.sendData(JSON.stringify({ items }));
 }
