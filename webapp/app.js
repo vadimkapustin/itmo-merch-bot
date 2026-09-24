@@ -9,8 +9,8 @@ const tg = window.Telegram.WebApp;
 tg.ready();   // сообщаем Telegram, что сайт загрузился
 tg.expand();  // раскрываем сайт на весь экран
 
-// Если initData пустая — сайт открыт не из Telegram, а в обычном браузере.
-const insideTelegram = Boolean(tg.initData);
+// В обычном браузере platform = "unknown", внутри Telegram — "android", "ios", "tdesktop" и т.п.
+const insideTelegram = tg.platform !== "unknown";
 
 // Корзина: Map вида {id товара → количество}
 const cart = new Map();
